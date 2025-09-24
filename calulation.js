@@ -1,4 +1,6 @@
-let operand1, operator, operand2;
+let operand1 = null;
+let operator = null;
+let operand2 = null;
 
 const add = (a,b) => a + b;
 const sub = (a,b) => a - b;
@@ -8,30 +10,26 @@ const divide = (a,b) => a / b;
 function operate(operand1, operator, operand2){
     switch (operator){
         case (operator == "+"):
-            result=add(operand1, operand2);
-            break;
+            return add(operand1, operand2);
         
         case (operator == "-"):
-            result=sub(operand1, operand2);
-            break;
+            return sub(operand1, operand2);
 
         case (operator == "*"):
-            result=mul(operand1, operand2);
-            break;
+            return mul(operand1, operand2);
 
         case (operator == "/"):
-            result=divide(operand1, operand2);
-            break;
+            return divide(operand1, operand2);
     }
 
 }
 
 const buttons = document.querySelectorAll(".buttons button");
 buttons.forEach(button => {
-        button.addEventListener("click", (e)=>{
-            e.target.style.backgroundColor = "rgba(199, 92, 26, 1)";
-            e.target.style.fontSize = "33px";
-        });
+//         button.addEventListener("click", (e)=>{
+//             e.target.style.backgroundColor = "rgba(199, 92, 26, 1)";
+//             e.target.style.fontSize = "33px";
+//         });
 
         button.addEventListener("mouseleave", (e)=>{
             e.target.style.backgroundColor ="antiquewhite";
@@ -40,17 +38,31 @@ buttons.forEach(button => {
 
 });
 
-// let selectedVal = 0;
+const clear = document.getElementById("clear");
+clear.addEventListener("click", ()=>{
+    screen.textContent = "";
+    clear.style.backgroundColor = "rgba(199, 92, 26, 1)";
+    clear.style.fontSize = "33px";
+});
+
+let selectedVal = "";
 const screen = document.querySelector("#screen");
 const digit = document.querySelectorAll(".digit");
 digit.forEach(n => {
     n.addEventListener("click", (e)=>{
-        operand1= e.target.textContent ;
-        screen.textContent += selectedVal
+        selectedVal= e.target.textContent ;
+        screen.textContent += selectedVal;
+        e.target.style.backgroundColor = "rgba(199, 92, 26, 1)";
+        e.target.style.fontSize = "33px";
     })
 });
+
+const symbol
     
-// console.log(add(15,5));
-// console.log(sub(15,5));
-// console.log(mul(15,5));
-// console.log(divide(15,5));
+if(operand1 === null){
+    operand1 = Number(selectedVal);
+}
+else{
+    operand2 = Number(selectedVal);
+    operand1 = operate(operand1,operate,operand2);
+}
