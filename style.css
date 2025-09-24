@@ -1,0 +1,47 @@
+body{
+    background-color: rgb(1, 1, 29);
+    margin: auto;
+}
+
+#title{
+    color: antiquewhite;
+    text-align: center;
+}
+
+#screen{
+    display: block;
+    width: 290px;
+    height: 85px;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    margin: 8px auto ;
+    font-size: 25px;
+    font-weight: 800;
+    color: brown;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.buttons button{
+    display: flex;
+    width: 65px;
+    height: 65px;
+    border-radius: 30%;
+    border: none;
+    background-color: antiquewhite;
+    font-size: 25px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+
+}
