@@ -1,8 +1,8 @@
-# 🔢 Vanilla JS Calculator
+# Vanilla JS Calculator
 
 A simple calculator built with **HTML, CSS, and JavaScript**. It supports basic arithmetic operations including addition, subtraction, multiplication, and division — along with UI interactions and input validation.
 
-## 🚀 Features
+## Features
 
 - Click-based input (no keyboard required)
 - Basic operations: `+`, `−`, `×`, `÷`
@@ -10,7 +10,7 @@ A simple calculator built with **HTML, CSS, and JavaScript**. It supports basic 
 - Clear/reset functionality
 - Styled button interaction effects
 
-## 🖥️ Demo
+## Demo
 
 https://meena044.github.io/Calculator/
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c256aaf3-8b23-4cc7-9113-f78e865ad96d" />
@@ -46,7 +46,7 @@ https://meena044.github.io/Calculator/
 
 ---
 
-## 🛠️ Tech Used
+## Tech Used
 
 - HTML5
 - CSS3
