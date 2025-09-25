@@ -3,6 +3,7 @@ let operator = "";
 let operand2 = null;
 let selectedVal = "";
 
+
 const add = (a,b) => a + b;
 const sub = (a,b) => a - b;
 const mul = (a,b) => a * b;
@@ -56,6 +57,10 @@ values.forEach(clicked => {
             screen.textContent += val;
         } 
         else if (/^[+−×÷]$/.test(val)) {
+            if (selectedVal === "" && operand1 === null) {
+            // First input is an operator — ignore it
+            return;
+        }
             if (selectedVal !== "") {
                 if (operand1 === null) {
                     operand1 = Number(selectedVal);
@@ -67,6 +72,7 @@ values.forEach(clicked => {
             }
 
             operator = normalizeOperator(val);
+            console.log(operator);
             selectedVal = "";
             screen.textContent += val;
         }
